@@ -1,0 +1,13 @@
+$TTL 3600   ; 1 heure
+@	IN	SOA	srvssh.local.ciel.fr. postmaster.local.ciel.fr. (
+		 2020033001		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+
+@   IN   NS	srvssh.local.ciel.fr.
+
+10.56.168.192.in-addr.arpa     IN   PTR srvssh.local.ciel.fr.
+11.56.168.192.in-addr.arpa     IN   PTR clissh.local.ciel.fr.
+254.56.168.192.in-addr.arpa    IN   PTR routeur.local.ciel.fr.
