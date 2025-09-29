@@ -57,7 +57,8 @@ Il est nécessaire de configurer un client de bureau à distance.
 
 Il y a 4 images opérationnelles plus une image Debian 12 de base.
 
-Les images existent déjà sur le Docker Hub sous l'id docker "abulcke" mais vous pouvez créer vos propres images après avoir éventuellement modifié les "variables" et les Dockerfile respectifs
+Les images existent déjà sur le Docker Hub sous l'id docker "abulcke" mais vous pouvez créer vos propres images après avoir éventuellement modifié les "variables" et les Dockerfile respectifs.
+Par contre la génération de l'image KALI bloque lors de l'installation de ssh-mitm... Il faut donc modifier l'image KALI "à la main" !
 
 Elles sont très légères :
 
