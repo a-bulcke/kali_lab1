@@ -6,9 +6,9 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "local.ciel.fr" {
+zone "local.sio.fr" {
     type master;
-    file "/var/named/db.local.ciel.fr";
+    file "/var/named/db.local.sio.fr";
 };
 
 zone "56.168.192.in-addr-arpa" {

@@ -47,10 +47,10 @@ HOST_KALI="kali"
 HOST_ROUTEUR="routeur"
 
 # Configuration du domaine
-DOMAINE=local.ciel.fr
+DOMAINE=local.sio.fr
 
 # Configuration de l'utilisateur
-USERNAME="etubts"
+USERNAME="etusio"
 USERPASS="Fghijkl1234*"
 
 # Configuration des volumes
@@ -206,7 +206,7 @@ CONFIGURATION_ROUTEUR() {
 
     fi
 
-    # Activation du NAT sur le réseau connecté à l'infrastructure du BTS
+    # Activation du NAT sur le réseau connecté à l'infrastructure du BTS SIO
     if ! (docker exec --privileged "$ROUTEUR" iptables -t nat -L | grep MASQUERADE >/dev/null); then
         docker exec --privileged "$ROUTEUR" iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
         echo -e "Activation du NAT... Fait"
@@ -315,7 +315,7 @@ if [ -n "$create" ]; then
 
     echo -e "\nLancement du routeur"
     # Lancement du routeur
-    # Le routeur est connecté au réseau de l'infrastructure du BTS - eth0 (réseau bridge par défaut de Docker)
+    # Le routeur est connecté au réseau de l'infrastructure du BTS SIO - eth0 (réseau bridge par défaut de Docker)
     # Adresse IP en DHCP
     if (docker run --name "$ROUTEUR" \
         --pull always \
